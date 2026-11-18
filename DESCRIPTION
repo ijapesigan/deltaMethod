@@ -1,0 +1,32 @@
+Package: deltaMethod
+Title: Delta Method Standard Errors and Confidence Intervals
+Version: 0.0.1
+Authors@R: 
+    person(given = "Ivan Jacob Agaloos",
+           family = "Pesigan",
+           role = c("aut", "cre", "cph"),
+           email = "r.jeksterslab@gmail.com",
+           comment = c(ORCID = "0000-0003-4818-8420"))
+Description: Delta method sampling variance-covariance matrices,
+    standard errors, test statistics, and confidence intervals
+    for functions of parameters using a numerical Jacobian.
+    The functions take either a vector of estimates with its
+    sampling variance-covariance matrix and an R function,
+    or a fitted model object and character strings that define
+    functions of its coefficients.
+URL: https://github.com/ijapesigan/deltaMethod,
+        https://ijapesigan.github.io/deltaMethod/
+BugReports: https://github.com/ijapesigan/deltaMethod/issues
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+Depends: R (>= 3.5.0)
+Imports: numDeriv, stats
+Suggests: knitr, rmarkdown, testthat
+VignetteBuilder: knitr
+Config/roxygen2/version: 8.1.1.9000
+NeedsCompilation: no
+Packaged: 2026-11-18 19:21:42 UTC; root
+Author: Ivan Jacob Agaloos Pesigan [aut, cre, cph] (ORCID:
+    <https://orcid.org/0000-0003-4818-8420>)
+Maintainer: Ivan Jacob Agaloos Pesigan <r.jeksterslab@gmail.com>
