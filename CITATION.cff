@@ -1,0 +1,39 @@
+# ------------------------------------------------
+# CITATION.cff file created with {cffr} R package
+# See also: https://docs.ropensci.org/cffr/
+# ------------------------------------------------
+ 
+cff-version: 1.2.0
+message: 'To cite package "deltaMethod" in publications use:'
+type: software
+license: MIT
+title: 'deltaMethod: Delta Method Standard Errors and Confidence Intervals'
+version: 0.0.1
+abstract: Delta method sampling variance-covariance matrices, standard errors, test
+  statistics, and confidence intervals for functions of parameters using a numerical
+  Jacobian. The functions take either a vector of estimates with its sampling variance-covariance
+  matrix and an R function, or a fitted model object and character strings that define
+  functions of its coefficients.
+authors:
+- family-names: Pesigan
+  given-names: Ivan Jacob Agaloos
+  email: r.jeksterslab@gmail.com
+  orcid: https://orcid.org/0000-0003-4818-8420
+preferred-citation:
+  type: manual
+  title: 'deltaMethod: Delta Method Standard Errors and Confidence Intervals'
+  authors:
+  - family-names: Pesigan
+    given-names: Ivan Jacob Agaloos
+    email: r.jeksterslab@gmail.com
+    orcid: https://orcid.org/0000-0003-4818-8420
+  year: '2026'
+  notes: R package version 0.0.1
+repository-code: https://github.com/ijapesigan/deltaMethod
+url: https://ijapesigan.github.io/deltaMethod/
+contact:
+- family-names: Pesigan
+  given-names: Ivan Jacob Agaloos
+  email: r.jeksterslab@gmail.com
+  orcid: https://orcid.org/0000-0003-4818-8420
+

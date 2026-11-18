@@ -1,0 +1,13 @@
+destination: pkgdown
+url: https://ijapesigan.github.io/deltaMethod/
+
+template:
+  package: rProject
+
+articles:
+- title: Getting Started
+  contents:
+  - deltaMethod
+- title: Session Information
+  contents:
+  - session

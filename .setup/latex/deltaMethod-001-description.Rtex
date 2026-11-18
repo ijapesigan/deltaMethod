@@ -1,0 +1,106 @@
+\documentclass{article}
+
+\input{.setup/latex/preamble/preamble}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BIBLATEX APA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%% begin.rcode
+% #| label = "root",
+% #| include = FALSE
+% root <- rprojroot::is_rstudio_project
+%% end.rcode
+
+%% begin.rcode
+% #| label = "knitr",
+% #| include = FALSE,
+% #| file = root$find_file(
+% #|   ".setup",
+% #|   "latex",
+% #|   "r-scripts",
+% #|   "knitr.R"
+% #| )
+%% end.rcode
+
+%% begin.rcode
+% #| label = "biblatex",
+% #| echo = FALSE,
+% #| message = FALSE,
+% #| warning = FALSE,
+% #| results = "asis"
+% if (require(package = "rProject")) {
+%   Bib(
+%     path = dirname(
+%       path = root$find_file(
+%         "project.Rproj"
+%       )
+%     )
+%   )
+%   cat(
+%     .PreambleBiblatex(
+%       path = root$find_file(
+%         ".setup",
+%         "latex",
+%         "bib"
+%       )
+%     )
+%   )
+% } else {
+%   cat(
+%     .PreambleCombined(
+%       path = root$find_file(
+%         ".setup",
+%         "latex",
+%         "bib"
+%       ),
+%       output_path = root$find_file(
+%         ".setup",
+%         "latex"
+%       )
+%     )
+%   )
+% }
+%% end.rcode
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{deltaMethod: Delta Method Standard Errors and Confidence Intervals}
+\author{Ivan Jacob Agaloos Pesigan}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Description}
+
+Delta method sampling variance-covariance matrices, standard errors,
+test statistics, and confidence intervals
+for functions of parameters
+using a numerical Jacobian.
+
+\section*{Installation}
+
+You can install the development version of \texttt{deltaMethod} from
+\href{https://github.com/ijapesigan/deltaMethod}{GitHub} with:
+
+%% begin.rcode
+% #| eval = FALSE
+% if (!requireNamespace(package = "pak", quietly = TRUE)) {
+%   utils::install.packages(pkgs = "pak")
+% }
+% pak::pkg_install(pkg = "ijapesigan/deltaMethod")
+%% end.rcode
+
+\section*{More Information}
+
+See
+\href{https://ijapesigan.github.io/deltaMethod/index.html}{GitHub Pages}
+for package documentation.
+
+\nocite{RCoreTeam-2026}
+
+\printbibliography
+
+\end{document}
