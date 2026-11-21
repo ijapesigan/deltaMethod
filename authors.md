@@ -11,12 +11,12 @@ Source:
 [`inst/CITATION`](https://github.com/ijapesigan/deltaMethod/blob/main/inst/CITATION)
 
 Pesigan, I. J. A. (2026). deltaMethod: Delta Method Standard Errors and
-Confidence Intervals. R package version 0.0.1.
+Confidence Intervals. R package version 0.0.2.
 https://github.com/ijapesigan/deltaMethod
 
 @Manual{,\
   author = {Ivan Jacob Agaloos Pesigan},\
   title = {deltaMethod: Delta Method Standard Errors and Confidence Intervals},\
   year = {2026},\
-  note = {R package version 0.0.1},\
+  note = {R package version 0.0.2},\
 }
