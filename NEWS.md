@@ -1,3 +1,11 @@
+# deltaMethod 0.0.2
+
+## Bug fixes
+
+- `Delta()` and `DeltaGeneric()`: with one coefficient and more than one output (or definition), the covariance matrix was
+  cut to its first element. Both now compute \(J V J'\) for any number of coefficients and outputs; results with one output,
+  or more than one coefficient, are unchanged.
+
 # deltaMethod 0.0.1
 
 ## Template

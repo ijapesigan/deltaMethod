@@ -119,3 +119,34 @@ lapply(
   tol = 1e-04,
   text = "test-deltaMethod-delta-generic"
 )
+
+## ---- test-deltaMethod-delta-generic-one-coefficient
+lapply(
+  X = 1,
+  FUN = function(i,
+                 text) {
+    testthat::skip_on_cran()
+    testthat::skip_if_not_installed(pkg = "numDeriv")
+    message(text)
+    testthat::test_that(
+      desc = paste(text, "one coefficient, two outputs: J V J'"),
+      code = {
+        fit <- stats::lm(formula = dist ~ speed, data = datasets::cars)
+        names(x = fit$coefficients) <- c("a", "b")
+        out <- DeltaGeneric(
+          object = fit,
+          def = list("b^2", "b^3")
+        )
+        b <- stats::coef(object = fit)[["b"]]
+        j <- matrix(data = c(2 * b, 3 * b^2), ncol = 1)
+        v <- stats::vcov(object = fit)["b", "b"]
+        testthat::expect_equal(
+          object = unname(obj = out$vcov),
+          expected = j %*% v %*% t(x = j),
+          tolerance = 1e-6
+        )
+      }
+    )
+  },
+  text = "test-deltaMethod-delta-generic-one-coefficient"
+)
