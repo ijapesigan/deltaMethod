@@ -8,7 +8,7 @@ message: 'To cite package "deltaMethod" in publications use:'
 type: software
 license: MIT
 title: 'deltaMethod: Delta Method Standard Errors and Confidence Intervals'
-version: 0.0.1
+version: 0.0.2
 abstract: Delta method sampling variance-covariance matrices, standard errors, test
   statistics, and confidence intervals for functions of parameters using a numerical
   Jacobian. The functions take either a vector of estimates with its sampling variance-covariance
@@ -28,7 +28,7 @@ preferred-citation:
     email: r.jeksterslab@gmail.com
     orcid: https://orcid.org/0000-0003-4818-8420
   year: '2026'
-  notes: R package version 0.0.1
+  notes: R package version 0.0.2
 repository-code: https://github.com/ijapesigan/deltaMethod
 url: https://ijapesigan.github.io/deltaMethod/
 contact:

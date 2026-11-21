@@ -136,3 +136,34 @@ lapply(
   tol = 1e-04,
   text = "test-deltaMethod-delta"
 )
+
+## ---- test-deltaMethod-delta-one-coefficient
+lapply(
+  X = 1,
+  FUN = function(i,
+                 text) {
+    testthat::skip_on_cran()
+    testthat::skip_if_not_installed(pkg = "numDeriv")
+    message(text)
+    testthat::test_that(
+      desc = paste(text, "one coefficient, two outputs: J V J'"),
+      code = {
+        out <- Delta(
+          coef = c(a = 2),
+          vcov = matrix(data = 0.5, dimnames = list("a", "a")),
+          func = function(x) {
+            c(sq = x[["a"]]^2, cube = x[["a"]]^3)
+          }
+        )
+        j <- matrix(data = c(2 * 2, 3 * 2^2), ncol = 1)
+        v <- 0.5
+        testthat::expect_equal(
+          object = unname(obj = out$vcov),
+          expected = j %*% v %*% t(x = j),
+          tolerance = 1e-6
+        )
+      }
+    )
+  },
+  text = "test-deltaMethod-delta-one-coefficient"
+)

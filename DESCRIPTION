@@ -1,6 +1,6 @@
 Package: deltaMethod
 Title: Delta Method Standard Errors and Confidence Intervals
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: 
     person(given = "Ivan Jacob Agaloos",
            family = "Pesigan",
