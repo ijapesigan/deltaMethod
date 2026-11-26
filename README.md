@@ -1,7 +1,7 @@
 deltaMethod
 ================
 Ivan Jacob Agaloos Pesigan
-2026-11-26 20:56:23
+2026-11-26 21:07:53
 
 <!-- README.md is generated from .setup/readme/README.Rmd. Please edit that file -->
 
